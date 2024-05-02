@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyframes</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            min-height: 100vh;
+            background-color: black;
+        }
+
+        div.sun {
+          position: absolute;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: yellow;
+        top: 150px;
+        left: 570px;
+        animation: rotateSun 10s linear infinite;
+      }
+
+      @keyframes rotateSun {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+        div.earth{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: blue;
+            top: 180px;
+            left: 590px;
+            animation: orbitEarth 5s linear infinite;
+        }
+
+        @keyframes orbitEarth {
+        from {
+          transform: rotate(0deg) translateX(100px) rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg) translateX(100px) rotate(-360deg);
+        }
+      }
+    </style>
+</head>
+
+<body>
+    <div class="sun"></div>
+    <div class="earth"></div>
+</body>
+</html>
